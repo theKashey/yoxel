@@ -1,6 +1,7 @@
 {
   "name": "yoxel",
   "version": "0.0.0-beta",
+  "description": "Semantic reporting tool",
   "main": "dist/es5/index.js",
   "module": "dist/es2015/index.js",
   "module:es2019": "dist/es2019/index.js",
