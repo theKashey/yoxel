@@ -1,0 +1,61 @@
+{
+  "name": "yoxel",
+  "version": "0.0.0-beta",
+  "main": "dist/es5/index.js",
+  "module": "dist/es2015/index.js",
+  "module:es2019": "dist/es2019/index.js",
+  "types": "dist/es5/index.d.ts",
+  "license": "MIT",
+  "devDependencies": {
+    "@theuiteam/lib-builder": "^0.1.4",
+    "@size-limit/preset-small-lib": "^2.1.6"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "dev": "lib-builder dev",
+    "test": "jest",
+    "test:ci": "jest --runInBand --coverage",
+    "build": "lib-builder build && yarn size:report",
+    "release": "yarn build && yarn test",
+    "size": "npx size-limit",
+    "size:report": "npx size-limit --json > .size.json",
+    "lint": "lib-builder lint",
+    "format": "lib-builder format",
+    "update": "lib-builder update",
+    "prepublish": "yarn build && yarn changelog",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "changelog:rewrite": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": ["html tree", "a11y", "storybook"],
+  "repository": "",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.{js,css,json,md}": [
+      "prettier --write"
+    ]
+  },
+  "prettier": {
+    "printWidth": 120,
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "semi": true,
+    "singleQuote": true
+  }
+}
