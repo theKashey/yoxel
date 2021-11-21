@@ -27,7 +27,7 @@ describe('Does nothing', () => {
             "category": "area",
             "children": Array [
               Object {
-                "category": "node",
+                "category": "header",
                 "children": Array [],
                 "node": <h1>
                   test
@@ -67,7 +67,7 @@ describe('Does nothing', () => {
             "category": "area",
             "children": Array [
               Object {
-                "category": "node",
+                "category": "header",
                 "children": Array [],
                 "node": <h1>
                   test
@@ -76,7 +76,7 @@ describe('Does nothing', () => {
                 "type": "h1",
               },
               Object {
-                "category": "node",
+                "category": "header",
                 "children": Array [],
                 "node": <h3>
                   test

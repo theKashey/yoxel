@@ -35,14 +35,14 @@ describe('html-reports', () => {
       <li>
       <div class=\\"yoxel-type-area yoxel-main\\" data-type=\\"main\\">
       <ul><li>
-      <div class=\\"yoxel-type-node yoxel-h1\\" data-type=\\"h1\\">title
+      <div class=\\"yoxel-type-header yoxel-h1\\" data-type=\\"h1\\"> title
 
       </div>
       </li>
       <li>
       <div class=\\"yoxel-type-area yoxel-section\\" data-type=\\"section\\">
       <ul><li>
-      <div class=\\"yoxel-type-node yoxel-h2\\" data-type=\\"h2\\">caption
+      <div class=\\"yoxel-type-header yoxel-h2\\" data-type=\\"h2\\">- caption
 
       </div>
       </li></ul>
