@@ -13,13 +13,11 @@ export const buildTree = (root: HTMLElement) => {
     children: [],
   }
 
-  console.log(Array.from(semanticBlocks).map(x => x.tagName));
-
   semanticBlocks.forEach((block) => {
     const isHeader = headers.includes(block.tagName.toLowerCase() as any);
     const parent = findPlacement(tree, block);
     const element: SemanticTree = {
-      category: isHeader ? 'node' : 'area',
+      category: isHeader ? 'header' : 'area',
       type: block.tagName.toLowerCase() as SemanticNode,
       payload: isHeader ? block.textContent : undefined,
       node: block,
