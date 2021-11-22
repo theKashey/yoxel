@@ -1,6 +1,6 @@
 {
   "name": "yoxel",
-  "version": "0.0.1-beta",
+  "version": "0.1.0",
   "description": "Semantic reporting tool",
   "main": "dist/es5/index.js",
   "module": "dist/es2015/index.js",
@@ -36,7 +36,10 @@
   "files": [
     "dist"
   ],
-  "keywords": ["html tree", "a11y"],
+  "keywords": [
+    "html tree",
+    "a11y"
+  ],
   "repository": "",
   "husky": {
     "hooks": {
