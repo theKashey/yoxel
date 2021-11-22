@@ -2,7 +2,12 @@ import {SemanticTree} from "./types";
 
 const isHeader = (test: SemanticTree): boolean => test.category === 'header';
 
-export const listHeaders = (tree: SemanticTree): SemanticTree[] => {
+/**
+ * lists headings in the given document
+ * @param tree
+ * @returns list of headers on the given page
+ */
+export const listHeadings = (tree: SemanticTree): SemanticTree[] => {
   const headers: SemanticTree[] = [];
   const walk = (branches: SemanticTree[]) => {
     for (const test of branches) {
@@ -16,7 +21,11 @@ export const listHeaders = (tree: SemanticTree): SemanticTree[] => {
   return headers;
 }
 
-export const findNearestHeader = (branches: SemanticTree[]): SemanticTree | undefined => {
+/**
+ * finds heading in the current branch
+ * @param branches
+ */
+export const findNearestHeading = (branches: SemanticTree[]): SemanticTree | undefined => {
   for (const test of branches) {
     if (isHeader(test)) {
       return test;

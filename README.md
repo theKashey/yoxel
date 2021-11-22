@@ -13,7 +13,21 @@
 </div>
 
 # Idea
-Inspired and named after [yoksel](https://github.com/yoksel) 's [HTML-tree](https://github.com/yoksel/html-tree)
+
+Inspired and named after [yoksel](https://github.com/yoksel) 's [HTML-tree](https://github.com/yoksel/html-tree).
+
+## API
+
+- `build(htmlNode): SemanticTree` creates a structure representing SemanticTree
+- `getYAMLReport(tree: SemanticTree)` converts tree into YML format, useful for shapshot testing
+
+## Purpose
+
+Provide a11y helpers to reflect page structure.
+
+## Usages
+
+- [storybook-addon-poleaxe](https://github.com/theKashey/storybook-addon-poleaxe)
 
 # License
 

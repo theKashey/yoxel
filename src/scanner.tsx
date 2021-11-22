@@ -2,6 +2,10 @@ import {SemanticNode, SemanticTree} from "./types";
 import {headers, locations} from "./known-nodes";
 import {findPlacement} from "./utils";
 
+/**
+ * builds a SemanticTree for a given node
+ * @param root
+ */
 export const buildTree = (root: HTMLElement) => {
   const semanticBlocks = root.querySelectorAll<HTMLElement>(`${headers.join(',')}, ${locations.join(',')}`);
 
